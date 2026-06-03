@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-dark: #06133e;
+            --primary-blue: #0d56d6;
+            --accent: #52f3c6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+        }
+
+   
+
+        .main-header {
+            background: var(--primary-dark);
+            padding: 14px 0;
+        }
+
+        .logo {
+            height: 42px;
+            width: auto;
+        }
+        .vector {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .nav-link {
+            color: #fff !important;
+            margin: 0 12px;
+            font-weight: 500;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: .95rem;
+            font-weight: 500;
+        }
+        .service-text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+            .nav-link:hover {
+                color: var(--accent) !important;
+            }
+
+      
+
+        .hero {
+            margin: 20px;
+            background: linear-gradient(135deg, #030a3d, #0f5de0);
+            border-radius: 25px;
+            overflow: hidden;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+        .side-img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .hero-content {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            color: #cdd7ff;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-features {
+            margin: 30px 0;
+            color: #dbe5ff;
+            font-size: 1rem;
+        }
+
+            .hero-features span {
+                margin: 0 15px;
+            }
+
+        .call-btn {
+            background: var(--accent);
+            color: #06133e;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(82,243,198,.3);
+        }
+
+            .call-btn:hover {
+                transform: translateY(-3px);
+            }
+
+ 
+
+        .bottom-features {
+            padding: 30px 20px;
+            color: white;
+            border-top: 1px solid rgba(255,255,255,.15);
+        }
+        
+        
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+           
+        }
+
+       
+
+        @media (max-width: 991px) {
+
+            .side-img {
+                display: none;
+            }
+
+            .hero-content {
+                
+                text-align: left;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .hero {
+                margin: 10px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-features {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+                .hero-features span {
+                    margin: 0;
+                }
+
+            .service-text {
+                margin-top: 15px;
+            }
+        }
+
+      
+
+        .about-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #06133e;
+            line-height: 1.2;
+        }
+
+        .about-desc {
+            color: #6b7280;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            color:blue;
+            font-weight: 500;
+        }
+
+            .about-list li {
+                margin-bottom: 15px;
+            }
+
+        .contact-box {
+            background: #3cc8f0;
+            color: white;
+            padding: 18px 25px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+
+        .hexagon {
+            width: 450px;
+            height: 450px;
+            background-color: blue;
+            clip-path: polygon( 50% 0%, 100% 35%, 100% 100%, 0% 100%, 0% 35% );
+        }
+
+            .hexagon img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+     
+        @media(max-width:991px) {
+            .about-title {
+                text-align: center;
+                font-size: 32px;
+            }
+
+            .about-desc {
+                text-align: center;
+            }
+
+            .contact-box {
+                display: block;
+                text-align: center;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="main-header">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+
+                <a class="navbar-brand" href="#">
+                    <img src="HomePro.png" alt="Logo" class="logo">
+                </a>
+
+
+                <!--/*had for the mobile design to make menu sha7t*/-->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--هاد القسم يلي رح ينفتح ويتسكر لما تضغطي لـ navbar ☰*/-->
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <ul class="navbar-nav mx-auto">
+                        <!--in the middle of the screeen  m fo the margin the x is for making left or right*/-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="text-white service-text">
+                        <span class="text-danger">●</span>
+                        24 Hour Service
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+
+
+
+   <!--hero section is here-->
+
+    <section class="hero">
+
+   <!-- g-0 = بدون فراغ
+        align-items-center = توسيط عمودي
+        row = تقسيم أعمدة -->
+
+        <div class="row g-0 align-items-center">
+
+            <div class="col-lg-3">
+                <img src="Image.png" alt="" class="side-img">
+            </div>
+
+            <!--   /* col-lg-6 = نصف الشاشة على الكمبيوتر
+       col-12 = كامل الشاشة على الموبايل  */-->
+
+            <div class="col-lg-6 col-12">
+
+                <div class="hero-content">
+
+                    <div class="hero-subtitle">
+                        Maintenance
+                        <!--mx-2  بيعطي المسافة يلي بين النقطة والحكي يلي حدها */-->
+
+                        <span class="mx-2">•</span>
+                        Repairs
+                        <span class="mx-2">•</span>
+                        Improvements
+                    </div>
+
+                    <h1 class="hero-title">
+                        Need improvement <br>
+                        or repair your home? <br>
+                        We can help!
+                    </h1>
+
+                    <div class="hero-features">
+                        <span>✔ Free Quotes</span>
+                        <span>✔ 100% Commitment-Free</span>
+                    </div>
+
+                    <button class="call-btn">
+                        Call Us Now →
+                    </button>
+
+                </div>
+
+            </div>
+
+           
+            <div class="col-lg-3">
+                <img src="Image - Copy.png" alt="" class="side-img">
+            </div>
+
+        </div>
+        <div class="container-fluid bottom-features">
+            <div class="row">
+
+                <div class="col-md-3 col-6 feature-item"> 
+                   <!-- /* رح نشوف بالتلفون لعواميد حد بعض ال2 و ال2 التانين تحتهن اما الابتوب رح نشوف الاربعة حد بعض*/-->
+                    <img src="Ic_24-Guarantee (1).png" class="vector" />Satisfaction Guarantee
+                </div>
+
+                <div class="col-md-3 col-6 feature-item">
+                    <img src="Ic_24-Clock.png" class="vector" /> <span>24H Availability</span>
+                </div>
+
+                <div class="col-md-3 col-6 feature-item">
+                    <img src="Ic_24-Map-pin.png" class="vector" /> <span>Professionals</span>
+                </div>
+
+                <div class="col-md-3 col-6 feature-item">
+                    <img src="Icon.png" class="vector" /><span>flexible Appointment</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+
+                    <h2 class="about-title">
+                        Professional for your<br>
+                        home services
+                    </h2>
+
+                    <p class="about-desc">
+                        You need help for home care? We are home care professionals focused in the US region.
+                        We provide several services that support home services.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-6">
+                            <ul class="about-list">
+                                <li>✓ Repair and Installation</li>
+                                <li>✓ Maintenance</li>
+                                <li>✓ Home Security Services</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6">
+                            <ul class="about-list">
+                                <li>✓ Plumbing</li>
+                                <li>✓ Budget-friendly</li>
+                                <li>✓ Eco-friendly solutions</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-box mt-4">
+                        We already provide 24 hours fast services to help you.<br>
+                        You can contact us at <strong><u>(888) 617-5894</u></strong>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 text-center">
+
+                    <div class="hexagon">
+                        <img src="roof.png" alt="workerInRoof">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
